@@ -1,0 +1,656 @@
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+
+  .auth-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7%;
+    text-align: center;
+  }
+
+  .container {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 4px rgba(255, 0, 0, 0.329);
+    width: 300px;
+    margin: 0 auto;
+    padding: 3%;
+    padding-right: 5%;
+  }
+
+  .auth-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .auth-label {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: start;
+  }
+
+  .auth-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .auth-button {
+    margin-top: 20px;
+  }
+
+  .auth-submit {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .auth-submit:hover {
+    background-color: #45a049;
+  }
+
+  .auth-error {
+    color: red;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+
+  span {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  span a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+
+  .login-container {
+    text-align: center;
+    margin-top: 7%;
+  }
+
+  .login-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .login-label {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: start;
+  }
+
+  .login-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .login-button {
+    margin-top: 20px;
+  }
+
+  .login-submit {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .login-submit:hover {
+    background-color: #45a049;
+  }
+
+  .login-error {
+    color: red;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+
+  span {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  span a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+
+  .home-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .home-header {
+    background-color: #007bff;
+    color: white;
+    padding: 1px;
+    border-radius: 10px;
+  }
+
+  .home-header h1 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .home-header p {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .home-main {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+  }
+
+  .home-section {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 45%;
+  }
+
+  .home-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .home-section p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .home-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  .home-button:hover {
+    background-color: #45a049;
+  }
+
+  nav{
+    background-color: #f2f2f2;
+    width: 100%;
+    height:70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgb(0,0,0,0.15);
+  }
+
+  .fixed{
+    padding:1vw 8vw;
+  }
+
+  #menu-btn{
+    width: 30px;
+    height: 30px;
+    display: none;
+  }
+
+  #menu-close{
+    display: none;
+  }
+
+  nav .navigation{
+    display: flex;
+    margin-right: 4%;
+  }
+
+  nav .navigation ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav .navigation ul li{
+    list-style: none;
+    font-size: 17px;
+    margin-left: 20px;
+  }
+  button{
+    width: 120px;
+    height: 35px;
+    padding: 1px;
+    margin-bottom: 1px;
+    background-color: #0047ca;
+    border: none;
+    border-radius: 8px;
+    color:rgb(250, 250, 250);
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s ease;
+  }
+  button:hover{
+      background-color: #002c5fe1;
+  }
+  nav .navigation ul li a{
+    text-decoration: none;
+    color:rgb(21,21,100);
+    font-size: 17px;
+    font-weight: 700;
+    transition: 0.3s ease;
+    padding:10px ;
+  }
+
+  nav .navigation ul li a.active,
+  nav .navigation ul li a:hover{
+    color: gold;
+  }
+
+  .sign-out-button {
+    background-color: red;
+    color: white; 
+    border: none;
+    padding: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+  }
+
+  .sign-out-button:hover {
+    background-color: darkred;
+  }
+
+  .about-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .about-header {
+    background-color: #007bff;
+    color: white;
+    padding: 2px;
+    border-radius: 10px;
+  }
+
+  .about-header h1 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .about-main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .about-section {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    margin-top: 15px;
+    padding: 10px;
+    box-shadow: 0px 0px 8px 2px rgba(0, 47, 255, 0.356);
+    width: 44%;
+  }
+
+  .about-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .about-section p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .grievance-form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 20px;
+    padding-right: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 5px 1px rgba(0, 119, 255, 0.589);
+    border-radius: 5px;
+    background-color: #fff;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    text-align: start;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  select,
+  textarea,
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .admin-page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .admin-header {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .category-select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    outline: none;
+  }
+
+
+  .filtered-grievances-container {
+    margin-top: 30px;
+  }
+
+
+  .category-header {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+
+  .grievances-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .grievance-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .index-badge {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: green;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 20px;
+  }
+
+  .address-label {
+    font-weight: bold;
+    color: darkorange;
+    margin-top: 10px;
+    display: block;
+  }
+
+  .description-label {
+    font-weight: bold;
+    color: darkorange;
+    margin-top: 10px;
+    display: block;
+  }
+
+
+  .confirmation-container {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .confirmation-header {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .confirmation-paragraph {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .confirmation-list {
+    list-style-type: square;
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  .confirmation-item {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .confirmation-category-label {
+    font-weight: bold;
+    color: #a31000; 
+  }
+
+  .confirmation-description {
+    font-weight: bold;
+    color: #005f9e; 
+  }
+
+  .confirmation-address-label {
+    font-weight: bold;
+    color: #008537; 
+  }
+
+  .confirmation-phone-label {
+    font-weight: bold;
+    color: #8f5800; 
+  }
+
+  .confirmation-name-label {
+    font-weight: bold;
+    color: #540075;
+  }
+
+  .confirmation-link-back {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+
+  .confirmation-link-back:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .auth-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 7%;
+      text-align: center;
+    }
+  
+    .container {
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0px 0px 10px 4px rgba(255, 0, 0, 0.329);
+      width: 300px;
+      margin: 0 auto;
+      padding: 3%;
+      padding-right: 8%;
+    }
+  
+    .auth-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  
+    .admin-page-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f8f8f8;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .admin-header {
+      font-size: 32px;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    .category-select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 18px;
+      outline: none;
+    }
+  
+    .filtered-grievances-container {
+      margin-top: 30px;
+    }
+  
+    .confirmation-container {
+      max-width: 600px;
+      margin: 0 auto;
+      margin-top: 15px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .home-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .grievance-form-container{
+      padding: 20px;
+      padding-right: 40px;
+    }
+
+    .grievance-form-container input{
+      width: 100%;
+    }
+
+    .confirmation-header {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    nav .navigation ul li svg{
+      font-size: 15px;
+    }
+
+    nav .navigation ul li{
+      display: flex;
+      font-size: 13px;
+      justify-content: flex-start;
+      margin: 8px;
+      
+    }
+
+    nav .navigation ul li a{
+      font-size: 14px;padding: 5px;
+    }
+
+    .about-section {
+      width: 80%;
+      margin-bottom: 10px;
+    }
+
+    .home-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .home-section {
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      padding: 10px;
+      width: 90%;
+      margin-top: 20px;
+
+    }
+  
+    .confirmation-paragraph {
+      font-size: 18px;
+      color: #555;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
